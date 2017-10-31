@@ -6,7 +6,7 @@ name: Chris Rohrer                      # Real name of the person
   git:                                     # git configuration on the lab machines
     user:
       name: Chris Rohrer
-      email: chris.rohrer@ubuntunet.net
+      email: chris.rohrer@ubuntunet.mw
     core:
       editor:
         name: vim
