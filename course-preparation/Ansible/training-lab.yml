@@ -120,9 +120,9 @@
     - name: Ensure that the user is in sudoers
       lineinfile:
         line: "{{item.username}}    ALL=NOPASSWD: ALL"
-        file: /etc/sudoers
+        path: /etc/sudoers
         validate: /usr/sbin/visudo -cf %s
-      with_fileglob: "group_vars/participants-addis/*"
+      with_items: "{{ participants }}"
 
 # assert that the preferred package is in the prerequisites ?
     - name: Assert that the preferred editor is in prerequisites
@@ -139,7 +139,7 @@
     - name: Git config for the users
       git_config:
         name: core.editor
-        value: "{{ item.git.core.editor}}"
+        value: "{{ item.git.core.editor.name}}"
         scope: global
       with_items: "{{ participants }}"
 
