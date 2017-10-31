@@ -1,0 +1,31 @@
+---
+
+- hosts: all
+  become: true
+  name: Deploy Docker onto your own server
+  tasks:
+
+  - name: Install prerequisite to use apt with https
+    apt:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - software-properties-common
+  - name: Ensure Docker repository key is installed
+    apt_key:
+      id: "0EBFCD88"
+      keyserver: "https://download.docker.com/linux/ubuntu/gpg"
+      state: present
+
+  - name: Ensure docker registry is available
+    apt_repository: 
+      repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+      state: present
+
+  - name: Ensure docker and dependencies are installed
+    apt:
+      name: docker-ce
+      update_cache: yes
