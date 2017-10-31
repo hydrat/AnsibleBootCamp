@@ -17,7 +17,7 @@ participants:
   - name: Abdulkarim Msangi                   # Real name of the person
     org: TERNET                                # Organisation/team they work in
     username: abms                     # username on the lab machine
-    github: abmsangi@gmail.com                       # github user account
+    github: abms                     # github user account
     git:                                     # git configuration on the lab machines
       user:
         name: abdulkarim msangi
@@ -59,7 +59,7 @@ participants:
   - name: Hellen Nakawungu                      # Real name of the person
     org: RENU                               # Organisation/team they work in
     username: hellen                     # username on the lab machine
-    github: hellen                      # github user account
+    github: hkabuubi                      # github user account
     git:                                     # git configuration on the lab machines
       user:
         name: Hellen Nakawungu
@@ -72,7 +72,7 @@ participants:
              Debian: vim
   - name: Josiah Kisoso                      # Real name of the person
     org: UR                               # Organisation/team they work in
-    username: josiah.kisoso                     # username on the lab machine
+    username: josiah                    # username on the lab machine
     github: morendat                       # github user account
     git:                                     # git configuration on the lab machines
       user:
@@ -105,7 +105,7 @@ participants:
     git:                                     # git configuration on the lab machines
       user:
         name: Mohamed A. Ali
-         email: ict@psu.edu.so
+        email: ict@psu.edu.so
       core:
         editor:
           name: vim
@@ -143,7 +143,7 @@ participants:
   - name: Walumbuka Ilundu WAil                     # Real name of the person
     org: MINESU                               # Organisation/team they work in
     username: wail                            # username on the lab machine
-    github: wail                              # github user account
+    github: ilundawail                              # github user account
     git:                                      # git configuration on the lab machines
       user:
         name: walumbuka wail
@@ -156,7 +156,7 @@ participants:
             Debian: vim
   - name: Walu Gondwe                          # Real name of the person
     org: MAREN                             # Organisation/team they work in
-    username: walusungu.gondwe             # username on the lab machine
+    username: walusungu             # username on the lab machine
     github: agondway                       # github user account
     git:                                     # git configuration on the lab machines
       user:
