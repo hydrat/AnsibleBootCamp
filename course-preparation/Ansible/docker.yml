@@ -12,13 +12,13 @@
     with_items:
       - apt-transport-https
       - ca-certificates
-      - curl
-      - software-properties-common
+
   - name: Ensure Docker repository key is installed
     apt_key:
+      url: "https://download.docker.com/linux/ubuntu/gpg"
       id: "0EBFCD88"
-      keyserver: "https://download.docker.com/linux/ubuntu/gpg"
       state: present
+    ignore_errors: true
 
   - name: Ensure docker registry is available
     apt_repository: 
@@ -29,3 +29,15 @@
     apt:
       name: docker-ce
       update_cache: yes
+
+  - name: Pick up participants
+    include_vars:
+      file: "group_vars/participants-addis.yml"
+
+  - name: Allow unprivileged user to run docker
+    user: 
+      name: "{{ item.username }}"
+      groups: docker
+      append: yes
+    with_items: "{{ participants }}"
+
