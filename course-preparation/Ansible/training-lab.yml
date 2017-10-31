@@ -120,7 +120,7 @@
 # assert that the preferred package is in the prerequisites ?
     - name: Assert that the preferred editor is in prerequisites
       assert:
-        that: "{{ item.git.core.package[ansible_os_family ]}} in prerequisites[ansible_os_family]"
+        that: "'{{ item.git.core.editor.package[ansible_os_family ]}}' in prerequisites[ansible_os_family]"
       with_items: "{{ participants }}"
 
     # - name: Ensure that the preferred editor is available
